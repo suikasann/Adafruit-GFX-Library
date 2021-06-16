@@ -1389,4 +1389,10 @@ void GFXcanvas16::fillScreen(uint16_t color) {
     }
 }
 
-
+void Adafruit_GFX::drawPingxing(int16_t x0, int16_t y0,
+        int16_t x1, int16_t y1, int16_t x2, int16_t y2, int16_t x3, int16_t y3, uint16_t color){
+	drawLine(x0, y0, x1, y1, color);
+    drawLine(x0, y0, x2, y2, color);
+    drawLine(x3, y3, x2, y2, color);
+	drawLine(x3, y3, x1, y1, color);
+}
